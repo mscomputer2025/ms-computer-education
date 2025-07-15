@@ -1,0 +1,64 @@
+<footer class="container-fluid text-white pt-4 pb-3 mt-5 footer-bg">
+    <div class="mx-3">
+        <div class="row">
+            <!-- Institute Info -->
+            <div class="col-md-4 mb-3">
+                <a class="navbar-brand" href="#">
+                    <img src="{{ asset('footerlogo.jpg') }}" alt="Institute Logo" width="50" height="70"
+                        class="img-fluid rounded-circle me-2">
+                </a>
+                <span class="fw-bold h5">MS COMPUTER EDUCATION</span>
+                <p class="mt-2">
+                    MS COMPUTER nurtures dreams and shapes futures by awakening potential and inspiring a passion for
+                    technical excellence. Our education system is rooted in proven methods, focused on guidance,
+                    prevention of faults, and constructive support.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-1 mb-3">
+                <h5 class="fw-bold">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="{{ route('courses') }}" class="text-white text-decoration-none">Courses</a></li>
+                    <li><a href="{{ route('gallery') }}" class="text-white text-decoration-none">Gallery</a></li>
+                    <li><a href="{{ route('aboutus') }}" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="{{ route('contactus') }}" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Courses Offered -->
+            <div class="col-md-3 mb-3">
+                <h5 class="fw-bold">Courses Offered</h5>
+                <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="{{ route('courses.basic') }}">Basic Computer</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.pgdca') }}">PGDCA</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.adit') }}">ADIT</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.web_design') }}">Web Development & Designing</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.dca') }}">Diploma in Computer Application</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.accounting') }}">Financial Accounting with GST</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.dtp') }}">Desktop Publishing</a></li>
+                    <li><a class="dropdown-item" href="{{ route('courses.msoffice') }}">Microsoft Office Courses</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h5 class="fw-bold">Contact Us</h5>
+                <p><i class="bi bi-envelope-fill me-2"></i>Email: mscomputeronline@gmial.com</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>Email: mscomputerank@gmial.com</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>Phone:+91 7600 991 605 </p>
+                <p><i class="bi bi-telephone-fill me-2"></i>Phone:+91 8401 330 313</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>Phone:+91 8780 729 978</p>
+                <p><i class="bi bi-geo-alt-fill me-2 align-middle"></i> Mohammadpura,Bharuch</p>
+                <p><i class="bi bi-geo-alt-fill me-2 align-middle"></i> SF-94,Omkar-2,Ankleshwer</p>
+            </div>
+        </div>
+
+        <hr class="bg-secondary">
+        <div class="text-center py-3">
+            <small>&copy; {{ date('Y') }} by MS Computer Education. All rights reserved.</small>
+        </div>
+
+    </div>
+</footer>
