@@ -4,7 +4,7 @@
             <i class="bi bi-telephone"></i> +91 8780729978 | +91 7600991605
         </div>
         <div class="text-dark ">
-            <i class="bi bi-geo-alt"></i> Ankleshwer,Bharuch,Gujarat
+            <i class="bi bi-geo-alt"></i> Ankleshwer|Bharuch,Gujarat
         </div>
     </div>
 </div>
