@@ -1,3 +1,13 @@
+<div class="bg-danger py-1 border-bottom">
+    <div class="container-fluid d-flex justify-content-center align-items-center mx-4">
+        <div class="text-dark  me-5">
+            <i class="bi bi-telephone"></i> +91 8780729978 | +91 7600991605
+        </div>
+        <div class="text-dark ">
+            <i class="bi bi-geo-alt"></i> Ankleshwer,Bharuch,Gujarat
+        </div>
+    </div>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <div class="container-fluid mx-4">
         <a class="navbar-brand" href="#">

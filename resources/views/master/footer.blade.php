@@ -57,7 +57,7 @@
 
         <hr class="bg-secondary">
         <div class="text-center py-3">
-            <small>&copy; {{ date('Y') }} by MS Computer Education. All rights reserved.</small>
+            <small>&copy; Copyright {{ date('Y') }}  MS Computer Education | All rights reserved.</small>
         </div>
 
     </div>
