@@ -4,44 +4,49 @@
 
 @section('content')
 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
+    <div class="carousel-inner">
 
-    {{-- Slide 1 --}}
-    <div class="carousel-item active">
-      <div class="hero d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/herosection.jpeg') }}');">
-        <div class="text-center text-white">
-          <h1 class="display-3 fw-bold">Empowering Futures Through Technology</h1>
-          <p class="lead">Simple,Practical,Professional Computer Education.</p>
+        {{-- Slide 1 --}}
+        <div class="carousel-item active">
+            <div class="hero d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/herosection.jpeg') }}');">
+                <div class="text-center text-white">
+                    <h1 class="display-3 fw-bold">Empowering Futures Through Technology</h1>
+                    <p class="lead">Simple,Practical,Professional Computer Education.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="hero d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/hero2.webp') }}');">
-        <div class="text-center text-white">
-          <h1 class="display-3 fw-bold">Shaping Digital Minds</h1>
-          <p class="lead">From Basics to Advanced Learning</p>
+        <div class="carousel-item">
+            <div class="hero d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/hero2.webp') }}');">
+                <div class="text-center text-white">
+                    <h1 class="display-3 fw-bold">Shaping Digital Minds</h1>
+                    <p class="lead">From Basics to Advanced Learning</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="carousel-item">
-      <div class="hero d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/hero3.jpg') }}');">
-        <div class="text-center text-white">
-          <h1 class="display-3 fw-bold">Learn Today, Lead Tomorrow</h1>
-          <p class="lead">Future-Proof Your Skills with MS Computer</p>
+        <div class="carousel-item">
+            <div class="hero d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('images/hero3.jpg') }}');">
+                <div class="text-center text-white">
+                    <h1 class="display-3 fw-bold">Build Skills Today for a Successful Tomorrow</h1>
+                    <p class="lead">Future-Proof Your Skills with MS Computer</p>
+                </div>
+            </div>
         </div>
-      </div>
+
+    </div>
+    <div class="bg-primary text-white py-2">
+        <marquee behavior="scroll" direction="left">
+            🎓 Our institute offers 400+ courses with certification! ✅ Certificate valid in all Govt. Sectors. 🏛️ Online Certificate Verification (OTP Based) 🔐 | 👜 ITCT Bags & 📚 Study Material Available | 🖥️ Online/Offline Examination | 🚀 Building Successful Careers since 1999! 🌟
+        </marquee>
     </div>
 
-  </div>
-
-  {{-- Optional Controls --}}
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+    {{-- Optional Controls --}}
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
 </div>
 
 <section class="pt-5 bg-white text-center">
@@ -53,7 +58,8 @@
     </div>
 </section>
 
-<section class="py-5 text-center my-5" style="background-image:url('{{asset('images/course.jpg') }}');background-size:cover;background-repeat:no-repeat;background-position:center; background-attachment:fixed;" >
+
+<section class="py-5 text-center my-5" style="background-image:url('{{asset('images/course.jpg') }}');background-size:cover;background-repeat:no-repeat;background-position:center; background-attachment:fixed;">
     <div class="container">
         <h2 class="fw-bold mb-5 pt-5 text-white">What Do You Want to Study?</h2>
 
@@ -114,7 +120,7 @@
             @foreach ($courses as $course)
             <a href="{{ url('/courses') }}" class="text-decoration-none">
                 <div class="course-card flex-shrink-0" style="width: 250px;">
-                    <div class="card-content" >
+                    <div class="card-content">
                         <div class="card-overlay text-white d-flex flex-column align-items-center justify-content-center text-center px-2" style="background-color: rgba(66, 115, 161, 0.8); height: 75%;">
                             <i class="bi bi-{{ $course['icon'] }} fs-1 mb-2"></i>
                             <h6 class="fw-bold">{{ $course['title'] }}</h6>

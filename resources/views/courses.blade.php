@@ -25,30 +25,18 @@
         </div>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-    @php
-    $courses = [
-        ['title' => 'Fanancial Accounting', 'image' => 'accounting.jpg', 'route' => '/courses/accounting'],
-        ['title' => 'DCA (Diploma in Computer Application)', 'image' => 'software.jpg', 'route' => '/courses/dca'],
-        ['title' => 'Microsoft Office', 'image' => 'office.jpg', 'route' => '/courses/msoffice'],
-        ['title' => 'DTP(Desktop Publishing)', 'image' => 'dtp.jpg', 'route' => '/courses/dtp'],
-        ['title' => 'Diploma in Web Designing & Development', 'image' => 'web.jpg', 'route' => '/courses/web-development-design'],
-        ['title' => 'ADIT(Advanced Diploma in Information Technology)', 'image' => 'adit.jpg', 'route' => '/courses/adit'],
-        ['title' => 'Basic Computer Course', 'image' => 'basic.jpg', 'route' => '/courses/basic'],
-        ['title' => 'PGDCA(Post Graduate Diploma In computer Application)', 'image' => 'pgdca.png', 'route' => '/courses/pgdca']
-    ];
-    @endphp
-
     @foreach ($courses as $course)
-        <div class="col">
-            <a href="{{ url($course['route']) }}" class="text-decoration-none">
-                <div class="card h-100 shadow-sm">
-                    <img src="{{ asset('images/' . $course['image']) }}" class="card-img-top" style="height: 180px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $course['title'] }}</h5>
-                    </div>
+    <div class="col">
+        <a href="{{ route('courses.show', $course->course_id) }}" class="text-decoration-none">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ asset('images/' . $course->course_image) }}" class="card-img-top" style="height: 180px; object-fit: cover;">
+                <div class="card-body">
+                    <h4 class="card-title text-dark">{{ $course->course_title }}</h4>
+                    <h5 class="text-secondary">{{ $course->course_duration }}</h5>
                 </div>
-            </a>
-        </div>
+            </div>
+        </a>
+    </div>
     @endforeach
 </div>
 

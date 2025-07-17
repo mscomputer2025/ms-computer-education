@@ -31,14 +31,14 @@
             <div class="col-md-3 mb-3">
                 <h5 class="fw-bold">Courses Offered</h5>
                 <ul class="list-unstyled">
-                    <li><a class="dropdown-item" href="{{ route('courses.basic') }}">Basic Computer</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.pgdca') }}">PGDCA</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.adit') }}">ADIT</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.web_design') }}">Web Development & Designing</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.dca') }}">Diploma in Computer Application</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.accounting') }}">Financial Accounting with GST</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.dtp') }}">Desktop Publishing</a></li>
-                    <li><a class="dropdown-item" href="{{ route('courses.msoffice') }}">Microsoft Office Courses</a></li>
+                  <li><a class="dropdown-item" href="{{ route('courses.show', 'BCC01') }}">Basic Computer</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'PGDCA01') }}">PGDCA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ADIT01') }}">ADIT</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'WEB01') }}">Web Development & Designing</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DCA01') }}">Diploma in Computer Application</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ACC01') }}">Financial Accounting with GST</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DTO01') }}">Desktop Publishing</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'MS01') }}">Microsoft Office Courses</a></li>
                 </ul>
             </div>
 

@@ -1,9 +1,9 @@
 <div class="bg-danger py-1 border-bottom">
-    <div class="container-fluid d-flex justify-content-center align-items-center mx-4">
-        <div class="text-dark  me-5">
-            <i class="bi bi-telephone"></i> +91 8780729978 | +91 7600991605
+    <div class="container-fluid d-flex justify-content-center align-items-center mx-4 text-white ">
+        <div class=" me-5">
+            <i class="bi bi-telephone"></i> +91 7043037076 | +91 7600991605
         </div>
-        <div class="text-dark ">
+        <div class="">
             <i class="bi bi-geo-alt"></i> Ankleshwer|Bharuch,Gujarat
         </div>
     </div>
@@ -20,9 +20,9 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-            <ul class="navbar-nav mb-2 mb-lg-0" >
+            <ul class="navbar-nav mb-2 mb-lg-0">
 
-                <li class="nav-item" >
+                <li class="nav-item">
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>
 
@@ -32,14 +32,14 @@
                         Courses
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                        <li><a class="dropdown-item" href="{{ route('courses.basic') }}">Basic Computer</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.pgdca') }}">PGDCA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.adit') }}">ADIT</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.web_design') }}">Web Development & Designing</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.dca') }}">Diploma in Computer Application</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.accounting') }}">Financial Accounting with GST</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.dtp') }}">Desktop Publishing</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.msoffice') }}">Microsoft Office Courses</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'BCC01') }}">Basic Computer</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'PGDCA01') }}">PGDCA</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ADIT01') }}">ADIT</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'WEB01') }}">Web Development & Designing</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DCA01') }}">Diploma in Computer Application</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ACC01') }}">Financial Accounting with GST</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DTO01') }}">Desktop Publishing</a></li>
+                        <li><a class="dropdown-item" href="{{ route('courses.show', 'MS01') }}">Microsoft Office Courses</a></li>
                     </ul>
 
                 </li>
@@ -48,7 +48,7 @@
                     <a class="nav-link {{ request()->is('aboutus') ? 'active' : '' }}" href="{{ url('/aboutus') }}">About
                         Us</a>
                 </li>
-                  <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link {{ request()->is('gallery') ? 'active' : '' }}"
                         href="{{ url('/gallery') }}">Gallery</a>
                 </li>
