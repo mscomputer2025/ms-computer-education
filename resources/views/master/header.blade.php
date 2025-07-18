@@ -32,15 +32,15 @@
                         Courses
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'BCC01') }}">Basic Computer</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'PGDCA01') }}">PGDCA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ADIT01') }}">ADIT</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'WEB01') }}">Web Development & Designing</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DCA01') }}">Diploma in Computer Application</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ACC01') }}">Financial Accounting with GST</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DTO01') }}">Desktop Publishing</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'MS01') }}">Microsoft Office Courses</a></li>
+                        @foreach($allCourses as $course)
+                        <li>
+                            <a class="dropdown-item" href="{{ route('courses.show', $course->course_id) }}">
+                                {{ $course->course_title }}
+                            </a>
+                        </li>
+                        @endforeach
                     </ul>
+
 
                 </li>
 
@@ -57,6 +57,7 @@
                     <a class="nav-link {{ request()->is('contactus') ? 'active' : '' }}"
                         href="{{ url('/contactus') }}">Contact Us</a>
                 </li>
+               
 
             </ul>
         </div>

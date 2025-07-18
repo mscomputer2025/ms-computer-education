@@ -30,16 +30,17 @@
             <!-- Courses Offered -->
             <div class="col-md-3 mb-3">
                 <h5 class="fw-bold">Courses Offered</h5>
+
                 <ul class="list-unstyled">
-                  <li><a class="dropdown-item" href="{{ route('courses.show', 'BCC01') }}">Basic Computer</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'PGDCA01') }}">PGDCA</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ADIT01') }}">ADIT</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'WEB01') }}">Web Development & Designing</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DCA01') }}">Diploma in Computer Application</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'ACC01') }}">Financial Accounting with GST</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'DTO01') }}">Desktop Publishing</a></li>
-                        <li><a class="dropdown-item" href="{{ route('courses.show', 'MS01') }}">Microsoft Office Courses</a></li>
+                    @foreach($allCourses as $course)
+                    <li>
+                        <a class="dropdown-item" href="{{ route('courses.show', $course->course_id) }}">
+                            {{ $course->course_title }}
+                        </a>
+                    </li>
+                    @endforeach
                 </ul>
+
             </div>
 
             <!-- Contact Info -->
@@ -57,7 +58,7 @@
 
         <hr class="bg-secondary">
         <div class="text-center py-3">
-            <small>&copy; Copyright {{ date('Y') }}  MS Computer Education | All rights reserved.</small>
+            <small>&copy; Copyright {{ date('Y') }} MS Computer Education | All rights reserved.</small>
         </div>
 
     </div>

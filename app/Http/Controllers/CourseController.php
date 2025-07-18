@@ -18,4 +18,10 @@ class CourseController extends Controller
         $course = Courses::where('course_id', $course_id)->firstOrFail();
         return view('courses.show', compact('course'));
     }
+    public function home()
+{
+    $courses = Courses::all(); 
+
+    return view('homepage', compact('courses'));
+}
 }

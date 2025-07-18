@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\File;
 
-Route::view('/', 'homepage')->name('home');
+
+Route::get('/', [CourseController::class, 'home'])->name('home');
 Route::view('/contactus', 'contactus')->name('contactus');
 Route::view('/aboutus', 'aboutus')->name('aboutus');
 

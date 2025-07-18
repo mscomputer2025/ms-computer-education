@@ -59,85 +59,31 @@
 </section>
 
 
-<section class="py-5 text-center my-5" style="background-image:url('{{asset('images/course.jpg') }}');background-size:cover;background-repeat:no-repeat;background-position:center; background-attachment:fixed;">
+<section class="py-5 text-center my-5" style="background-image:url('{{ asset('images/course.jpg') }}');background-size:cover;background-repeat:no-repeat;background-position:center; background-attachment:fixed;">
     <div class="container">
         <h2 class="fw-bold mb-5 pt-5 text-white">What Do You Want to Study?</h2>
 
         <div class="d-flex flex-nowrap overflow-auto px-3 gap-4 justify-content-start custom-scroll">
-            @php
-            $courses = [
-            [
-            'image' => 'basic.jpg',
-            'icon' => 'laptop',
-            'title' => 'Basic Computer Course',
-            'duration' => '2 MONTHS'
-            ],
-            [
-            'image' => 'pgdca.jpg',
-            'icon' => 'award',
-            'title' => 'PGDCA (Post Graduate Diploma)',
-            'duration' => '12 MONTHS'
-            ],
-            [
-            'image' => 'web.jpg',
-            'icon' => 'code-slash',
-            'title' => 'Web Development and Designing',
-            'duration' => '12 MONTHS'
-            ],
-            [
-            'image' => 'software.jpg',
-            'icon' => 'file-earmark-code',
-            'title' => 'Diploma in Computer Application',
-            'duration' => '6 MONTHS'
-            ],
-            [
-            'image' => 'adit.jpg',
-            'icon' => 'cpu',
-            'title' => 'ADIT (Advanced Diploma in Information Technology)',
-            'duration' => '6 MONTHS'
-            ],
-            [
-            'image' => 'dtp.jpg',
-            'icon' => 'brush',
-            'title' => 'Desktop Publishing (DTP)',
-            'duration' => '3 MONTHS'
-            ],
-            [
-            'image' => 'accounting.jpg',
-            'icon' => 'graph-up',
-            'title' => 'Financial Accounting',
-            'duration' => '2 MONTHS'
-            ],
-            [
-            'image' => 'office.jpg',
-            'icon' => 'file-earmark-text',
-            'title' => 'Microsoft Office Course',
-            'duration' => '2 MONTHS'
-            ]
-            ];
-            @endphp
-
             @foreach ($courses as $course)
-            <a href="{{ url('/courses') }}" class="text-decoration-none">
-                <div class="course-card flex-shrink-0" style="width: 250px;">
-                    <div class="card-content">
-                        <div class="card-overlay text-white d-flex flex-column align-items-center justify-content-center text-center px-2" style="background-color: rgba(66, 115, 161, 0.8); height: 75%;">
-                            <i class="bi bi-{{ $course['icon'] }} fs-1 mb-2"></i>
-                            <h6 class="fw-bold">{{ $course['title'] }}</h6>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between align-items-center px-3 py-2" style="background-color:rgb(111, 173, 125); height: 25%;">
-                            <small class="fw-bold text-white">{{ $course['duration'] }}</small>
-                            <i class="bi bi-play-circle-fill text-white fs-5"></i>
+                <a href="{{ route('courses.show', $course->course_id) }}" class="text-decoration-none">
+                    <div class="course-card flex-shrink-0" style="width: 250px;">
+                        <div class="card-content">
+                            <div class="card-overlay text-white d-flex flex-column align-items-center justify-content-center text-center px-2" style="background-color: rgba(66, 115, 161, 0.8); height: 75%;">
+                                <i class="bi bi-laptop fs-1 mb-2"></i> {{-- Icon fix diya, agar chaho DB se bhi le sakte ho --}}
+                                <h6 class="fw-bold">{{ $course->course_title }}</h6>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between align-items-center px-3 py-2" style="background-color:rgb(111, 173, 125); height: 25%;">
+                                <small class="fw-bold text-white">{{ $course->course_duration }}</small>
+                                <i class="bi bi-play-circle-fill text-white fs-5"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
             @endforeach
         </div>
-
-
     </div>
 </section>
+
 
 
 
